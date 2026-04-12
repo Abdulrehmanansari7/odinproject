@@ -1,35 +1,43 @@
-const button = document.querySelector("button");
+const button = document.querySelectorAll("button");
 const log = document.getElementById("log");
 let playerScore = 0;
 let computerScore = 0;
 const ppoint = document.querySelector(".ppoint");
 const cpoint = document.querySelector(".cpoint");
 
+button.forEach((btn) => {
+  btn.addEventListener("click",handleClick);
+})
+
 function getComputerChoice() {
   const arr = ["rock", "paper", "scissor"];
   let sign2 = arr[Math.floor(Math.random() * arr.length)];
-  console.log(`Computer Chooses : ${sign2}`);
+  const computerBoard = document.querySelector(".computerBoard");
+  computerBoard.textContent = `Computer choose ${sign2}`
+  computerBoard.style.display = "block"
   return sign2;
 }
 
 function getHumanChoice(sign) {
-  console.log(`Player Chooses : ${sign}`);
+  const playerBoard = document.querySelector(".playerBoard");
+  playerBoard.textContent = `Player Chooses : ${sign}`; 
+  playerBoard.style.display = "block"
   return sign;
 }
 
 function round(cscore, pscore) {
   if (cscore === 5) {
-    log.style.fontSize = "30px";
+    log.style.fontSize = "80px";
     log.innerText = "Computer won";
     setTimeout(() => {
       window.location.reload();
-    }, 3000);
+    }, 2000);
   } else if (pscore === 5) {
-    log.style.fontSize = "30px";
+    log.style.fontSize = "80px";
     log.innerText = "Player won";
     setTimeout(() => {
       window.location.reload();
-    }, 3000);
+    }, 2000);
   }
 }
 
@@ -39,7 +47,7 @@ function playRound(comp, hum) {
     (hum === "paper" && comp === "scissor") ||
     (hum === "scissor" && comp === "rock")
   ) {
-    console.log("computer won");
+    log.innerHTML = "<h2>Computer Won</h2>"
     computerScore += 1;
     cpoint.innerHTML = computerScore;
   } else if (
@@ -47,33 +55,17 @@ function playRound(comp, hum) {
     (hum === "paper" && comp === "rock") ||
     (hum === "scissor" && comp === "paper")
   ) {
-    console.log("Player won");
+    log.innerHTML = "<h2>Player Won</h2>"
     playerScore += 1;
     ppoint.innerHTML = playerScore;
   } else {
-    console.log("Draw");
+    log.innerHTML = "<h2>Draw</h2>"
   }
   round(computerScore, playerScore);
 }
 
-button.addEventListener("click", () => {
-  let sign = prompt("Choose Rock,Paper,Scissor");
-  sign = sign.toLowerCase();
-
-  if (!sign) {
-    log.innerText = "OK, maybe next time.";
-    return;
-  } else if (
-    sign.toLowerCase() !== "rock" &&
-    sign.toLowerCase() !== "paper" &&
-    sign.toLowerCase() !== "scissor"
-  ) {
-    log.innerText = "choose from those three";
-    return;
-  } else {
-    log.innerText = `You Choose ${sign}`;
-  }
-  // getComputerChoice();
-  // getHumanChoice(sign)
+function handleClick(e){
+  let sign = e.target.value
   playRound(getComputerChoice(), getHumanChoice(sign));
-});
+}
+  
