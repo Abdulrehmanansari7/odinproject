@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sizeButton, .clrbtn{
+    margin: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+.clrbtn:nth-child(1){
+    background-color: red;
+}
+.clrbtn:nth-child(2){
+    background-color: blue;
+}
+.clrbtn:nth-child(3){
+    background-color: green;
+}
+
+.board{
+    height: 500px;
+    width: 500px;
+    display: grid; 
+}
+
+/* .square:hover {
+    background-color: black;
+} */
