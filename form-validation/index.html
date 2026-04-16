@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-validation</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="container">
+        <header class="nav">
+          <img src="img/odin-lined.png" alt="odin image" />
+          <p class="header">Odin</p>
+        </header>
+        <main>
+          <form action="#" method="get">
+            <div>
+              <label>Name:</label>
+              <input
+                type="text"
+                placeholder="Write your name"
+                name="username"
+                required
+                minlength="4"
+                maxlength="15"
+                title="your name should be atleast of 4 characters and most of 15"
+              />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                placeholder="Write your email"
+                name="email"
+                required
+                minlength="4"
+                maxlength="20"
+              />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input
+                type="password"
+                placeholder="Write your password"
+                name="password"
+                required
+                minlength="4"
+                maxlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{4,8}$"
+                title="min-4,max-8,one small letter,one capital letter,one number,one symbol is compulsory"
+              />
+            </div>
+            <div>
+              <button type="submit">Create Account</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
