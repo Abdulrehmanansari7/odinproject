@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    background-color: #F7F7FF;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+    gap: 80px;
+}
+
+button{
+    background-color: #27187E;
+    border-radius: 25px;
+    color: #F7F7FF;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#content {
+    background: url("./img/background.avif") center/cover no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contain{
+    position: absolute;
+    /* padding: 50px; */
+    top: 100px;
+    height: 85.5vh;
+    /* left: 20%; */
+    width: 100vw;
+    font-size: 20px;
+    color: #F7F7FF;
+    background-color:#27187E40;
+}
