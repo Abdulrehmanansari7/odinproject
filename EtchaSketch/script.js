@@ -20,7 +20,7 @@ sizeBtns.forEach((btn) => {
 clrbtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         clr = e.target.textContent.toLowerCase();
-        console.log(clr);
+        // console.log(clr);
     })
 })
 
