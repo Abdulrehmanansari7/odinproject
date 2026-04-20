@@ -1,4 +1,5 @@
 export default function loadFooter() {
+  const content = document.querySelector("#content")
   const footer = document.createElement("div");
   content.appendChild(footer);
   footer.classList.add("footer");

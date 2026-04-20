@@ -1,6 +1,7 @@
 import loadHome from "./home.js";
 import loadMenu from "./menu.js";
-import loadfooter from "./footer.js";
+import loadFooter from "./footer.js";
+import loadContact from "./contact.js";
 import  "./styles.css";
 
 const content = document.querySelector("#content")
@@ -12,14 +13,20 @@ function clearContent(){
 document.getElementById("home").addEventListener("click", () => {
     clearContent();
     loadHome();
-    loadfooter();
+    loadFooter();
 })
 document.getElementById("menu").addEventListener("click", () => {
     clearContent();
     loadMenu();
-    loadfooter();
+    loadFooter();
+})
+document.getElementById("contact").addEventListener("click", () => {
+    clearContent();
+    loadContact();
+    loadFooter();
 })
 
-loadMenu();
+loadHome();
+loadFooter();
 
 console.log("Hello")

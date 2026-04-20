@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box ;
 }
 
 nav{
@@ -23,6 +24,18 @@ button{
     cursor: pointer;
 }
 
+button:hover{
+    background-color: white;
+    border: white;
+    color: #27187E;
+}
+
+button:focus{
+    background-color: white;
+    border: white;
+    color: #27187E;
+}
+
 #content{
     background: url(./img/background.webp) center/cover repeat;
     /* height: 100vh; */
@@ -43,12 +56,14 @@ h1{
     padding-top: 10px;
     font-size: 30px;
     margin-top: 40px;
+    background-color: #F7F7FF;
 }
 
 .container{
+    border: 15px solid #27187E;
     color: #27187E;
     background-color: #F7F7FF80;
-    margin: 0 550px;
+    margin: 20px 550px 20px 550px;
     text-align: center;
     line-height: 50px;
     font-size: 25px;
