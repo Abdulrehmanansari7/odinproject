@@ -14,7 +14,7 @@ nav{
     gap: 80px;
 }
 
-a{
+button{
     background-color: #27187E;
     border-radius: 25px;
     color: #F7F7FF;
@@ -39,7 +39,7 @@ h1{
     border-radius: 25px;
 }
 
-.container > p {
+.para1 {
     padding-top: 10px;
     font-size: 30px;
     margin-top: 40px;
