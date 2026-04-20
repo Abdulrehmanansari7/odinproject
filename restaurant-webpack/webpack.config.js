@@ -25,7 +25,7 @@ export default {
         use: ["html-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|avif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|avif|webp)$/i,
         type: "asset/resource",
       },
     ],

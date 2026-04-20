@@ -4,6 +4,7 @@
 
 nav{
     position: fixed;
+    top: 0;
     display: flex;
     background-color: #F7F7FF;
     justify-content: center;
@@ -13,7 +14,7 @@ nav{
     gap: 80px;
 }
 
-button{
+a{
     background-color: #27187E;
     border-radius: 25px;
     color: #F7F7FF;
@@ -22,20 +23,45 @@ button{
     cursor: pointer;
 }
 
-#content {
-    background: url("./img/background.avif") center/cover no-repeat;
-    height: 100vh;
-    width: 100vw;
+#content{
+    background: url(./img/background.webp) center/cover repeat;
+    /* height: 100vh; */
+    padding-top: 100px;
 }
 
-.contain{
-    position: absolute;
-    /* padding: 50px; */
-    top: 100px;
-    height: 85.5vh;
-    /* left: 20%; */
-    width: 100vw;
-    font-size: 20px;
+h1{
+    display: inline-flex;
+    margin-left: 625px;
+    margin-top: 50px;
+    color: #27187E;
+    background-color: #F7F7FF80;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.container > p {
+    padding-top: 10px;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.container{
+    color: #27187E;
+    background-color: #F7F7FF80;
+    margin: 0 550px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 50px;
+}
+
+.footer{
+    margin-top: 40px;
+    background-color: #27187E;
     color: #F7F7FF;
-    background-color:#27187E40;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    padding: 10px 0 10px 400px;
 }
